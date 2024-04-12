@@ -43,3 +43,4 @@ node_modules
 
 # Add your custom under the following line
 ###############################################
+src/styles/index.css
