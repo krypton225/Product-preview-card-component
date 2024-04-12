@@ -1,1 +1,122 @@
- 
+@use "../../../node_modules/sass-pire/src/sass-pire.scss" as *;
+
+.main {
+    max-width: px-to-rem(600);
+    border-radius: px-to-rem(10);
+    display: grid;
+    gap: 2rem;
+    background-color: var(--fem-white-clr);
+
+    @media (min-width: 320px) {
+        margin-inline: 1rem;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 500px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .first {
+        @media (min-width: 320px) {
+            max-height: px-to-rem(150);
+        }
+
+        @media (min-width: 500px) {
+            max-height: none;
+        }
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            background-image: url("./assets/images/image-product-desktop-blurred.jpg");
+            color: var(--fem-white-clr);
+            letter-spacing: 1px;
+            font-family: var(--fem-ff-mont);
+            font-size: px-to-rem(12);
+
+            @media (min-width: 320px) {
+                border-start-start-radius: px-to-rem(10);
+                border-start-end-radius: px-to-rem(10);
+                border-end-start-radius: 0;
+            }
+
+            @media (min-width: 500px) {
+                border-start-start-radius: px-to-rem(10);
+                border-start-end-radius: 0;
+                border-end-start-radius: px-to-rem(10);
+            }
+        }
+    }
+
+    .second {
+        padding-block: px-to-rem(25);
+        padding-inline-end: px-to-rem(28);
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        @media (min-width: 320px) {
+            gap: px-to-rem(14);
+            padding-inline-start: px-to-rem(28);
+        }
+
+        @media (min-width: 500px) {
+            gap: 0;
+            padding-inline-start: 0;
+        }
+
+        &__brand {
+            font-family: var(--fem-ff-mont);
+            font-weight: 500;
+            font-size: px-to-rem(12);
+            text-transform: uppercase;
+            letter-spacing: px-to-rem(5.5);
+            color: var(--fem-dark-grayish-blue-clr);
+
+            @media (min-width: 320px) {
+                font-size: px-to-rem(10);
+            }
+        }
+
+        &__title {
+            font-family: var(--fem-ff-fra, sans-serif);
+            font-size: px-to-rem(33);
+            line-height: 1;
+            color: var(--fem-very-dark-blue-clr);
+
+            @media (min-width: 320px) {
+                font-size: px-to-rem(32);
+            }
+        }
+
+        &__desc {
+            font-family: var(--fem-ff-mont, sans-serif);
+            font-weight: 500;
+            line-height: 1.5;
+            hyphens: none;
+            color: var(--fem-dark-grayish-blue-clr);
+        }
+
+        &__price {
+            display: flex;
+            align-items: center;
+            gap: px-to-rem(18);
+
+            .actual {
+                font-size: 2.25rem;
+                font-family: var(--fem-ff-mont);
+                font-weight: 700;
+                color: var(--fem-dark-cyan-clr);
+            }
+
+            .old {
+                font-size: px-to-rem(16);
+                text-decoration: line-through;
+                color: var(--fem-dark-grayish-blue-clr);
+            }
+        }
+    }
+}
