@@ -1,0 +1,20 @@
+@use "../../../node_modules/sass-pire/src/sass-pire.scss" as *;
+
+.btn {
+    padding-block: 0.7rem;
+    padding-inline: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    @include flex-center-center();
+    gap: 0.5rem;
+    background-color: var(--fem-dark-cyan-clr);
+    color: var(--fem-white-clr);
+    font-family: var(--fem-ff-mont);
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--fem-dark-cyan-hover-clr);
+    }
+}
