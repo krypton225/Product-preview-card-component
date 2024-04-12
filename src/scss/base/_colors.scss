@@ -1,12 +1,16 @@
-@use "../../../node_modules/sass-pire/src/sass-pire.scss" as *;
-
-@include generate-colors(
-    "fem",
-    (
-        "dark-cyan": hsl(158, 36%, 37%),
-        "cream": hsl(30, 38%, 92%),
-        "very-dark-blue": hsl(212, 21%, 14%),
-        "dark-grayish-blue": hsl(228, 12%, 48%),
-        "white": hsl(0, 0%, 100%)
-    )
-);
+:root {
+    --fem-brand-hue-clr: 158;
+    --fem-brand-saturation-clr: 36%;
+    --fem-brand-lightness-clr: 37%;
+    --fem-dark-cyan-clr: hsl(var(--fem-brand-hue-clr), var(--fem-brand-saturation-clr), var(--fem-brand-lightness-clr));
+    --fem-dark-cyan-hover-clr: hsl(
+        var(--fem-brand-hue-clr),
+        var(--fem-brand-saturation-clr),
+        calc(var(--fem-brand-lightness-clr) - 20%)
+    );
+    --fem-cream-clr: hsl(30, 38%, 92%);
+    --fem-very-dark-blue-clr: hsl(212, 21%, 14%);
+    --fem-dark-grayish-blue-clr: hsl(228, 12%, 48%);
+    --fem-white-clr: hsl(0, 0%, 100%);
+    --fem-gray-clr: hsl(0, 0%, 56%);
+}
