@@ -1,3 +1,5 @@
+@use "../../../node_modules/sass-pire/src/sass-pire.scss" as *;
+
 @font-face {
     font-display: swap;
     font-family: "Fraunces", sans-serif;
@@ -24,10 +26,17 @@
 
 :root {
     --fem-fz-base: 14px;
-    --fem-ff-fra: "Fraunces", sans-serif;
-    --fem-ff-mont: "Montserrat", sans-serif;
+    --fem-ff-fra: "Fraunces";
+    --fem-ff-mont: "Montserrat";
+}
+
+::selection {
+    background-color: var(--fem-dark-cyan-clr);
+    color: var(--fem-white-clr);
 }
 
 body {
     font-size: var(--fem-fz-base);
+    background-color: var(--fem-cream-clr);
+    @include flex-center-center();
 }
