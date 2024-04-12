@@ -23,6 +23,11 @@
 }
 
 :root {
+    --fem-fz-base: 14px;
     --fem-ff-fra: "Fraunces", sans-serif;
     --fem-ff-mont: "Montserrat", sans-serif;
+}
+
+body {
+    font-size: var(--fem-fz-base);
 }
